@@ -1,0 +1,12 @@
+<img [src]= "product.pImage">
+<p>Product: {{product.name}}</p>
+<p>Price: {{product.price}}</p>
+<p>Color: {{product.color}}</p>
+<p>Discount: {{product.price * product.discount_price / 100}}</p>
+<p>Stock: {{product.stock > 0 ? 'only' + product.stock + 'item left': "not in stock" }}</p>
+<button (click)="decrementCartValue()">-</button>
+<span>{{addToCart}}</span>
+<button (click)="incrementCartValue()">+</button>
+<!-- <button [disabled]="!(product.stock >0) " >Buy now</button>
+<input type="text" (input)="($event)"><br>
+<p>name={{name}}</p> -->
