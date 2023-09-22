@@ -535,4 +535,11 @@ export class ProductListComponent {
   totalProduct = this.products.length;
   totalProductInStock = this.products.filter(p=>p.is_in_inventory === true).length;
   totalProductOutOfStock = this.products.filter(p=>p.is_in_inventory === false).length;
-}
+
+      selectFilterRadioButton: string = 'All';
+
+      onFilterChanged(value: string){
+        this.selectFilterRadioButton = value;
+      }
+
+  }
